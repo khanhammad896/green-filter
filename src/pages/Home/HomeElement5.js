@@ -2,8 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import gradient from "../../assets/green-gradient-blue2.png";
 import youtube from "../../assets/yt.png";
-
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 const HomeElement5 = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 4,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <>
       <HomeElement5Wrapper gradient={gradient}>
@@ -14,6 +34,104 @@ const HomeElement5 = () => {
               <img src={youtube} alt="youtube" class="image-6" />
             </div>
           </div>
+        </div>
+        <div>
+          <Carousel
+            responsive={responsive}
+            swipeable={true}
+            draggable={true}
+            showDots={true}
+          >
+            <div className="carousel-item">
+              <iframe
+                width="460"
+                height="250"
+                src="https://www.youtube.com/embed/GT9H2omp1WE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="carousel-item">
+              <iframe
+                width="460"
+                height="250"
+                src="https://www.youtube.com/embed/om0RyH2ZXr8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="carousel-item">
+              <iframe
+                width="460"
+                height="250"
+                src="https://www.youtube.com/embed/k5NcFQDlZ4g"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="carousel-item">
+              <iframe
+                width="460"
+                height="250"
+                src="https://www.youtube.com/embed/d7rETWxgZ8U"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="carousel-item">
+              <iframe
+                width="460"
+                height="250"
+                src="https://www.youtube.com/embed/GT9H2omp1WE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="carousel-item">
+              <iframe
+                width="460"
+                height="250"
+                src="https://www.youtube.com/embed/om0RyH2ZXr8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="carousel-item">
+              <iframe
+                width="460"
+                height="250"
+                src="https://www.youtube.com/embed/k5NcFQDlZ4g"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div className="carousel-item">
+              <iframe
+                width="460"
+                height="250"
+                src="https://www.youtube.com/embed/d7rETWxgZ8U"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </Carousel>
+          ;
         </div>
       </HomeElement5Wrapper>
     </>
@@ -67,5 +185,28 @@ const HomeElement5Wrapper = styled.div`
     width: 200px;
     margin-left: 10px;
     float: right;
+  }
+
+  .carousel-item {
+    width: 480px;
+    height: 363px;
+    padding: 10px;
+  }
+
+  .react-multi-carousel-item {
+    display: flex;
+    justify-content: center;
+  }
+  .react-multiple-carousel__arrow {
+    display: none;
+  }
+  .react-multi-carousel-dot--active button {
+    background: #545353 !important;
+  }
+  .react-multi-carousel-dot button {
+    width: 5px;
+    height: 5px;
+    margin-right: 20px;
+    background: #ccc;
   }
 `;
